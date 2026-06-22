@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>明日之后食谱大全（2026初）</title>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/controls.css">
+		<link rel="stylesheet" href="css/filter-panel.css">
+		<link rel="stylesheet" href="css/recipe-card.css">
+		<link rel="stylesheet" href="css/animations.css">
+		<link rel="stylesheet" href="css/responsive.css">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>明日之后食谱大全（2026初）</h1>
+				<div class="stats" id="stats">加载中...</div>
+			</header>
+
+			<div class="controls">
+				<div class="search-box">
+					<input type="text" id="searchInput" placeholder="搜索食谱名称...">
+					<button class="clear-search-btn" id="clearSearchBtn" title="清空搜索">✕</button>
+				</div>
+				<label class="checkbox-wrap filter-checkbox" id="incompleteOnlyWrap">
+					<input type="checkbox" id="incompleteOnly">
+					仅未完成
+				</label>
+				<button class="filter-toggle" id="filterToggle">食材筛选</button>
+			</div>
+
+			<div class="filter-panel" id="filterPanel">
+				<h3>选择食材（单击包含 / 双击排除）</h3>
+				<div class="ingredient-search-box">
+					<input type="text" id="ingredientSearch" placeholder="搜索食材...">
+					<button class="clear-search-btn" id="clearIngredientSearchBtn" title="清空搜索">✕</button>
+				</div>
+				<div class="hidden-filters-hint" id="hiddenFiltersHint"></div>
+				<div class="ingredient-tags" id="ingredientTags"></div>
+				<div class="filter-actions">
+					<button class="clear-filter" id="clearFilter">清除筛选</button>
+					<span class="filter-hint" id="filterHint"></span>
+				</div>
+			</div>
+
+			<div class="recipe-list" id="recipeList"></div>
+
+			<footer class="site-footer">
+				数据来源于网易大神
+			</footer>
+		</div>
+
+		<script type="module" src="js/app.js"></script>
+	</body>
+</html>

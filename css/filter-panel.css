@@ -1,0 +1,121 @@
+.filter-panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0 16px;
+  margin-bottom: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.35s ease, margin-bottom 0.35s ease;
+}
+.filter-panel.open {
+  max-height: 2000px;
+  opacity: 1;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+.filter-panel h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.ingredient-search-box {
+  margin-bottom: 10px;
+  position: relative;
+}
+.ingredient-search-box input {
+  width: 100%;
+  padding: 8px 40px 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ingredient-search-box input:focus {
+  border-color: #3b82f6;
+}
+
+.ingredient-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.no-ingredient-results {
+  width: 100%;
+  text-align: center;
+  padding: 20px 16px;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px dashed #d1d5db;
+}
+
+.hidden-filters-hint {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #92400e;
+  display: none;
+}
+.hidden-filters-hint.visible {
+  display: block;
+}
+
+.ingredient-tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+  font-size: 0.85rem;
+  user-select: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.ingredient-tag:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+.ingredient-tag.selected {
+  background: #3b82f6;
+  color: #fff;
+  border-color: #3b82f6;
+}
+.ingredient-tag.excluded {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+}
+
+.filter-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+.filter-actions button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.clear-filter {
+  background: #e5e7eb;
+  color: #374151;
+}
+.clear-filter:hover {
+  background: #d1d5db;
+}
+.filter-hint {
+  font-size: 0.75rem;
+  color: #f59e0b;
+  align-self: center;
+}

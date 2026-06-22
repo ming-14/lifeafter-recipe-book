@@ -1,0 +1,38 @@
+@media (max-width: 640px) {
+  .recipe-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-panel.open {
+    max-height: none;
+    overflow-y: auto;
+    max-height: 70vh;
+  }
+
+  .ingredient-tags {
+    gap: 6px;
+  }
+
+  .ingredient-tag {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 16px;
+  }
+
+  .filter-panel h3 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .ingredient-search-box input {
+    padding: 7px 10px;
+    font-size: 0.85rem;
+  }
+
+  .filter-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
